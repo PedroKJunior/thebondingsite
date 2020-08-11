@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  width: 100vw;
+  background: #f3f3f3;
+  font-family: 'Ubuntu', sans-serif;
+  overflow: hidden;
+}
+
+.container-body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.cabecalho {
+  width: 100%;
+  display: flex;
+  height: 85px;
+  background: linear-gradient(to right, #2b72c2 0%, #1e8acb 65%);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.conteudo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  color: #FAFAFA;
+  opacity: .75;
+  transition: opacity .2s;
+}
+
+.menu ul li a:hover {
+  opacity: 1;
+}
+
+.menu ul li .user {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #FAFAFA;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu ul li .user .name {
+  margin: 0 3px;
+}
+
+.menu ul li .user .menu-suspenso {
+  position: absolute;
+  top: 59px;
+  left: -50%;
+  background: linear-gradient(to top, #2b72c2 0%, #1e8acb 100%);
+  width: 250px;
+  height: 250px;
+  padding: 15px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu ul li .user .menu-suspenso img {
+  width: 50%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.menu ul li .user .menu-suspenso button {
+  border: 1px solid #fafafa;
+  padding: 3px 5px;
+  background: transparent;
+  width: 100%;
+  border-radius: 3px;
+  color: #FAFAFA;
+  font-family: 'Ubuntu';
+  outline: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.menu ul li .user .menu-suspenso button:hover {
+  background: #fafafa;
+  color: #2b72c2;
+}
+
+.menu ul li .user .menu-suspenso .switch__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.menu ul li .user .menu-suspenso .switch__container .switch {
+  position: absolute;
+  margin: -99999px;
+}
+
+.menu ul li .user .menu-suspenso .switch__container .switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.menu ul li .user .menu-suspenso .switch__container .switch--flat + label {
+  padding: 2px solid;
+  width: 50px;
+  height: 25px;
+  background: #FAFAFA;
+  border-radius: 15px;
+  transition: background 0.4s;
+}
+
+.menu ul li .user .menu-suspenso .switch__container .switch--flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+.menu ul li .user .menu-suspenso .switch__container .switch--flat + label:after {
+  top: 1px;
+  left: 1px;
+  width: 23px;
+  height: 23px;
+  background: #2b72c2;
+  content: '';
+  border-radius: 18px;
+  transition: margin 0.4s;
+}
+
+.menu ul li .user .menu-suspenso .switch__container .switch--flat:checked + label:after {
+  margin-left: 25px;
+}
+
+.menu ul .separator {
+  width: 0;
+  padding: 0;
+  margin: 0 5px;
+  border-left: 1px solid #fafafa;
+}
+
+.body {
+  height: calc(100vh - 85px);
+  overflow-y: scroll;
+}
+
+.body .timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body .timeline .timeline-titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body .timeline .timeline-titulo h3 {
+  font-family: 'Maven Pro';
+  font-weight: 500;
+  color: #636363;
+  font-size: 27px;
+  padding: 10px;
+  margin-top: 45px;
+}
+
+.body .timeline .timeline-titulo hr {
+  width: 150px;
+  border-top: 3px solid #2196F3;
+  margin: 8px auto;
+}
+
+.body .timeline .timeline-titulo span {
+  font-family: 'Maven Pro';
+  font-weight: 500;
+  color: #636363;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.body .timeline .timeline-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.body .timeline .timeline-bar .active span.ball {
+  background: #18b6db;
+}
+
+.body .timeline .timeline-bar .active span.description {
+  color: #5e5e5e;
+}
+
+.body .timeline .timeline-bar .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14%;
+}
+
+.body .timeline .timeline-bar .step .ball {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DEDEDE;
+  border-radius: 50%;
+  color: #FAFAFA;
+  font-size: 25px;
+  font-family: 'Maven Pro';
+  font-weight: 500;
+}
+
+.body .timeline .timeline-bar .step .description {
+  text-align: center;
+  font-family: 'Marven Pro';
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #DEDEDE;
+}
+
+.body .timeline .timeline-bar .line {
+  width: 80px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.body .timeline .timeline-bar .line hr {
+  width: 100%;
+  border: none;
+  border-top: 3px solid #dedede;
+}
+
+.body .form-step-one {
+  width: 100%;
+}
+
+.body .form-step-one .fieldset {
+  font-family: Maven Pro, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2b72c2;
+  margin: 35px 0 20px 0;
+}
+
+.body .form-step-one .fieldset .obs {
+  margin-left: 15px;
+  font-size: 14px;
+  color: #5a5a5a;
+  font-weight: 400;
+}
+
+.body .form-step-one .radio-group {
+  display: flex;
+  align-items: center;
+}
+
+.body .form-step-one .radio-group input[type='radio'] {
+  margin-left: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.body .form-step-one .radio-group input[type='radio']:checked + label {
+  color: #2196F3;
+}
+
+.body .form-step-one .radio-group label {
+  font-family: Maven Pro, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3A3A3A99;
+  cursor: pointer;
+}
+
+.body .form-step-one .radio-group label:hover {
+  color: #3A3A3AFF;
+}
+
+.body .form-step-one .form-group {
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+}
+
+.body .form-step-one .form-group .input-group {
+  margin: 0 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.body .form-step-one .form-group .input-group span {
+  margin-top: 5px;
+  font-family: Ubuntu, sans-serif;
+  font-size: 12px;
+  color: #6a6a6a;
+}
+
+.body .form-step-one .form-group .input-group select {
+  padding: 5px 3px;
+  background: #FFFFFFAA;
+  border: 1px solid #2196F3;
+  border-radius: 3px;
+  width: 100%;
+  outline: none;
+  color: #5a5a5a;
+  font-family: Ubuntu, sans-serif;
+}
+
+.body .form-step-one .form-group .input-text {
+  border: 1px solid #2196F3;
+  border-radius: 3px;
+  width: 100%;
+  display: flex;
+  padding-left: 5px;
+}
+
+.body .form-step-one .form-group .input-text input {
+  padding: 5px 3px;
+  background: transparent;
+  outline: none;
+  font-family: Ubuntu, sans-serif;
+  color: #5a5a5a;
+  border: none;
+  width: 100%;
+}
+
+.body .form-step-one .form-group .input-text .prefix {
+  font-family: Ubuntu, sans-serif;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+.body .form-step-one .hr-separator {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #CECECE;
+  margin: 45px 0;
+}
+
+.body .form-step-one .btn-blue {
+  background-color: #05b5dc !important;
+  border: 1px solid #05b5dc !important;
+}
+
+.body .form-step-one .btn {
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: Ubuntu, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+  text-align: center;
+  padding: 15px 50px !important;
+  width: unset;
+  line-height: 0.5em;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+}
+
+.body .form-step-one .btn:hover {
+  opacity: .85;
+}
+
+.logo-tb {
+  height: 30px;
+}
+
+.logo-tb img {
+  height: 100%;
+}
+
+.no-visible {
+  visibility: hidden;
+  z-index: -5;
+}
+
+.blur-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.blur-modal .modal-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #fafafa;
+  border-radius: 3px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.31);
+  width: 750px;
+}
+
+.blur-modal .modal-welcome .modal-titulo {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+  display: flex;
+  align-items: center;
+}
+
+.blur-modal .modal-welcome .modal-titulo h4 {
+  width: 100%;
+  text-align: center;
+  color: #18b6db;
+  text-transform: uppercase;
+  padding: 10px 0;
+  font-size: 26px;
+  font-family: 'Maven Pro';
+  font-weight: 500;
+}
+
+.blur-modal .modal-welcome .modal-titulo .close {
+  color: #5e5e5e;
+  align-self: flex-start;
+  cursor: pointer;
+  user-select: none;
+}
+
+.blur-modal .modal-welcome .modal-corpo {
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blur-modal .modal-welcome .modal-corpo p {
+  font-family: 'Maven Pro';
+  font-weight: 400;
+  font-size: 13px;
+  color: #5e5e5e;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.blur-modal .modal-welcome .modal-corpo .modal-assinatura {
+  color: #18b6db;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-family: 'Maven Pro';
+  font-weight: 500;
+  align-self: flex-end;
+  padding: 10px 0;
+}
+
+.linha {
+  display: flex;
+  width: 100%;
+}
+
+.linha .col-empty {
+  width: 25%;
+  display: flex;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

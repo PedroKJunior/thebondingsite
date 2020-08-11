@@ -1,0 +1,105 @@
+.header
+    padding: 20px 0px
+    height: 100vh
+    background-image: radial-gradient(circle, #01b9dd 0%,#1b8bcb 100%)
+
+.open-nav
+    visibility: hidden
+
+.navbar
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+.navbar-brand
+    width: 200px
+    img
+        width: 100%
+
+.navbar-nav
+    display: flex
+    justify-content: flex-start
+    align-content: center
+    list-style: none
+    margin: 0 15px
+    width: 100%
+
+.nav-item
+    margin: 0 15px
+    align-self: center
+
+.nav-link
+    text-decoration: none
+    color: #FFF
+    font-size: 20px
+    font-weight: 300
+    letter-spacing: 1px
+    outline: none
+    padding: 5px 0
+    opacity: .85
+    transition: opacity .5s
+    position: relative
+
+    &:hover
+        opacity: 1
+
+.nav-button
+    text-decoration: none
+    color: #FAFAFA
+    font-size: 20px
+    font-weight: 400
+    padding: 10px 15px
+    text-align: center
+    border: 1px solid
+    border-color: transparent
+    transition: border-color .3s
+
+    &:hover
+        border-color: #FAFAFA
+
+.separator
+    border-left: 1px solid #FAFAFA
+    margin: 0 15px
+
+
+@media screen and (max-width: 600px), (orientation: portrait)
+    .navbar
+        align-items: flex-start
+        position: relative
+
+    .navbar-brand
+        margin: 0 15px
+        align-self: flex-start
+    
+    .navbar-menu
+        position: absolute
+        top: 60px
+        width: 100%
+        height: 100%
+
+    .navbar-nav
+        flex-direction: column
+        margin: 0
+
+    .nav-link, .nav-button
+        display: block
+        margin: 15px 0
+
+    .nav-button
+        border: 1px solid #FAFAFA
+            
+    .separator
+        border: none
+
+    .open-nav
+        color: #FAFAFA
+        visibility: visible
+        display: block
+        background: transparent
+        border: none
+        align-self: flex-start
+        outline: none
+        user-select: none
+
+    .no-visible 
+        visibility: hidden

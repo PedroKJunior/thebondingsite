@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/edit.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Editar Perfil - The Bonding</title>
+</head>
+<body onload="initialAnimations()">
+    <div class="container-body">
+        <div class="cabecalho">
+            <div class="conteudo">
+                <div class="logo-tb">
+                    <img src="assets/images/logo_blanco.fw.png" alt="The Bonding" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">Actividad</a>
+                        </li>
+                        <li>
+                            <a href="#">Mi Perfil</a>                          
+                        </li>
+                        <li>
+                            <a href="#">Vacante s Disponibles</a>
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            <div class="user" id="btnMenu">
+                                <span class="name">Pedro Júnior</span>
+                                <i class="material-icons">arrow_drop_down</i>
+                                <div class="menu-suspenso no-visible" id="menu">
+                                    <img src="assets/images/user.jpg" alt="Pedro Júnior">
+                                    <div class="switch__container">
+                                        <span>Português</span>
+                                        <input id="switch-flat" class="switch switch--flat" type="checkbox" />
+                                        <label for="switch-flat"></label>
+                                        <span>Español</span>
+                                    </div>
+                                    <button>Sair</button>
+                                </div>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="linha">
+                <div class="col col-25 menu-form">
+                    <ul>
+                        <li class="active">
+                            <a href="#informacion">Información Básica</a>
+                        </li>
+                        <li>
+                            <a href="#direccion">Dirección y País</a>
+                        </li>
+                        <li>
+                            <a href="#educacionales">Datos Educacionales</a>
+                        </li>
+                        <li>
+                            <a href="#profesionales">Datos Profesionales</a>
+                        </li>
+                        <li>
+                            <a href="#experiencia">Experiencia Laboral</a>
+                        </li>
+                        <li>
+                            <a href="#cv">CV & Reseña</a>
+                        </li>
+                        <li>
+                            <a href="#user">Usuario y Contraseña</a>
+                        </li>
+                    </ul>
+                </div>
+                <form action="">
+                    <h2 id="informacion">Editar Mi Perfil</h2>
+                    <div class="linha">
+                        <div class="col col-25">
+                            <div class="change-img">
+                                <img src="/assets/images/default.png" alt="">
+                                <div class="hover">
+                                    <i class="material-icons">photo_camera</i>
+                                    <span>Cambiar image</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-100">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Nombre Completo</label>
+                                    <input type="text" name="" id="name">
+                                </div>
+                            </div>
+
+                            <div class="radio-group">
+                                <div class="label">Género</div>
+
+                                <div class="input-radio">
+                                    <input type="radio" name="genero" id="female">
+                                    <label for="female">Femenino</label>
+                                                      
+                                    <input type="radio" name="genero" id="male">
+                                    <label for="male">Masculino</label>
+                
+                                    <input type="radio" name="genero" id="no_reply">
+                                    <label for="no_reply">Prefiro no decirlo</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col col-25">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="birth">Fecha de Nacimiento</label>
+                                    <input type="text" name="" id="birth">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-separator">
+                    <h4 id="direccion">Dirección y País</h4>
+                    <div class="linha">
+                        <div class="col col-50">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Dirección</label>
+                                    <input type="text" name="" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-25">
+                             <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Número</label>
+                                    <input type="text" name="" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-25">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Código Postal (opcional)</label>
+                                    <input type="text" name="" id="name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="col col-50">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Ciudad</label>
+                                    <input type="text" name="" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Región/Provincia</label>
+                                    <input type="text" name="" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">
+                            <div class="input-group">
+                                <div class="input-select">
+                                    <label for="country">Su país</label>
+                                    <select name="" id="country">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-separator">
+                    <h4 id="educacionales">Datos Educacionales</h4>
+                    <div class="linha">
+                        <div class="col col-50">
+                             <div class="input-group">
+                                <div class="input-select">
+                                    <label for="language">Idioma</label>
+                                    <select name="" id="language">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">
+                             <div class="input-group">
+                                <div class="input-select">
+                                    <label for="level">Nível</label>
+                                    <select name="" id="level">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 center">
+                            <button class="btn-add">
+                                <i class="material-icons">add_circle</i>
+                                <span>Agregar idioma</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="col col-50">
+                             <div class="input-group">
+                                <div class="input-select">
+                                    <label for="career">Carrera</label>
+                                    <select name="" id="career">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">  <div class="radio-group">
+                                <div class="label">¿Terminada?</div>
+
+                                <div class="input-radio">
+                                    <input type="radio" name="career-end" id="career-si">
+                                    <label for="career-si">Sí</label>
+                                                      
+                                    <input type="radio" name="career-end" id="career-no">
+                                    <label for="career-no">No</label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 center">
+                            <button class="btn-add">
+                                <i class="material-icons">add_circle</i>
+                                <span>Agregar carrera</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="col col-50">
+                             <div class="input-group">
+                                <div class="input-select">
+                                    <label for="post-title">Postítulo</label>
+                                    <select name="" id="post-title">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">  
+                            <div class="radio-group">
+                                <div class="label">¿Terminado?</div>
+
+                                <div class="input-radio">
+                                    <input type="radio" name="post-title-end" id="post-title-si">
+                                    <label for="post-title-si">Sí</label>
+                                                      
+                                    <input type="radio" name="post-title-end" id="post-title-no">
+                                    <label for="post-title-no">No</label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-25 center">
+                            <button class="btn-add">
+                                <i class="material-icons">add_circle</i>
+                                <span>Agregar postítulo</span>
+                            </button>
+                        </div>
+                    </div>
+                    <hr class="hr-separator">
+                    <h4 id="#profesionales">Datos Profesionales</h4>
+                    <div class="linha">
+                        <div class="col col-50">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Año que empecé a trabajar</label>
+                                    <input type="text" name="" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Renta Liquida Mensual</label>
+                                    <span class="prefix">$</span><input type="text" name="" id="name">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col col-50">
+                             <div class="input-group">
+                                <div class="input-select">
+                                    <label for="post-title">Disponibilidad</label>
+                                    <select name="" id="post-title">
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="col col-50">  
+                            <div class="radio-group">
+                                <div class="label">¿Te cambiarías de ciudad?</div>
+
+                                <div class="input-radio">
+                                    <input type="radio" name="change-city" id="change-city-si">
+                                    <label for="change-city-si">Sí</label>
+                                                      
+                                    <input type="radio" name="change-city" id="change-city-no">
+                                    <label for="change-city-no">No</label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">  
+                            <div class="radio-group">
+                                <div class="label">¿Te interesa recibir ofertas del extranjero?</div>
+
+                                <div class="input-radio">
+                                    <input type="radio" name="foreign" id="foreign-si">
+                                    <label for="foreign-si">Sí</label>
+                                                      
+                                    <input type="radio" name="foreign" id="foreign-no">
+                                    <label for="foreign-no">No</label>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">  
+                            <div class="radio-group">
+                                <div class="label">¿Te gusta tu trabajo actual?</div>
+
+                                <div class="input-radio">
+                                    <input type="radio" name="current" id="current-si">
+                                    <label for="current-si">Sí</label>
+                                                      
+                                    <input type="radio" name="current" id="current-no">
+                                    <label for="current-no">No</label>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-separator">
+                    <h4 id="#experiencia">Experiencia Laboral</h4>
+                    <div class="linha">
+                        <div class="col col-100">
+                            <button class="btn-add">
+                                <i class="material-icons">add_circle</i>
+                                <span>Agregar Experiencia</span>
+                            </button>
+                        </div>
+                    </div>
+                    <hr class="hr-separator">
+                    <h4 id="#cv">CV y Reseña</h4>
+                    <div class="linha">
+                        <div class="col col-50">
+                             <div class="input-group">
+                                <div class="input-text">
+                                    <label for="name">Reseña máx. 400 caracteres</label>
+                                    <textarea rows="8" id="review">
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-50">
+                            <div class="download-group">
+                                <span class="label">Carga tu CV en PDF o DOC </span>
+                                <div id="upload" class="upload">
+                                   <span>
+                                       Arrastre el archivo aquí o haga click aquí
+                                   </span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-separator">
+                    <h4 id="#cv">Usuario y Contraseña</h4>
+                    <div class="linha"></div>
+                </form>
+                <div class="col-empty"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/sizeView.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/menuToggle.js"></script> 
+    <script src="assets/js/dropPerfil.js"></script> 
+</body>
+</html>

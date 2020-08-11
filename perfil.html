@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/perfil.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Perfil - The Bonding</title>
+</head>
+<body onload="initialAnimations()">
+    <div class="container-body">
+        <div class="cabecalho">
+            <div class="conteudo">
+                <div class="logo-tb">
+                    <img src="assets/images/logo_blanco.fw.png" alt="The Bonding" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">Actividad</a>
+                        </li>
+                        <li>
+                            <a href="#">Mi Perfil</a>                          
+                        </li>
+                        <li>
+                            <a href="#">Vacante s Disponibles</a>
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            <div class="user" id="btnMenu">
+                                <span class="name">Pedro Júnior</span>
+                                <i class="material-icons">arrow_drop_down</i>
+                                <div class="menu-suspenso no-visible" id="menu">
+                                    <img src="assets/images/user.jpg" alt="Pedro Júnior">
+                                    <div class="switch__container">
+                                        <span>Português</span>
+                                        <input id="switch-flat" class="switch switch--flat" type="checkbox" />
+                                        <label for="switch-flat"></label>
+                                        <span>Español</span>
+                                    </div>
+                                    <button>Sair</button>
+                                </div>
+                            </div>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="timeline">
+                <div class="timeline-titulo">
+                    <h3>Encontrar la empresa de tus sueños</h3>
+                    <hr>
+                </div>  
+                <div class="linha">
+                    <div class="col-empty"></div>
+                    <div class="form-step-one">
+                        <div class="fieldset">
+                            Tu Situación
+                        </div>
+                        <div class="radio-group">
+                            
+                                <input type="radio" name="situation" id="working">
+                                <label for="working">Estoy trabajando</label>
+                                
+                                              
+                            <input type="radio" name="situation" id="unemployed">
+                            <label for="unemployed"> Estoy desempleado</label>
+        
+                            <input type="radio" name="situation" id="first">
+                            <label for="first">Busco mi primer empleo</label>
+                        </div>
+                        <div class="fieldset">
+                            Experiencia Profesional 
+                            <span class="obs">* Tu respuesta nos ayudará a proponerte ofertas que hagan match con tu experiencia profesio</span>
+                        </div>
+                        <div class="form-group">
+    
+                            <div class="input-group">
+                                <select name="" id="">
+                                    <option value="1" hidden selected>Áreas de interés/estudo</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <span>* Elegir hasta 2 areas</span>
+                            </div>
+    
+                            <div class="input-group">
+                                <select name="" id="">
+                                    <option value="1" hidden selected>Posiciones</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <span>* Presentaremos vacantes con posiciones similares</span>
+                            </div>
+                             
+                            <div class="input-group">
+                                <select name="" id="">
+                                    <option value="1" hidden selected>Industria</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <span>* Elegir la que tienes más experiencia</span>
+                            </div>
+    
+                            <div class="input-group">
+                                <select name="" id="">
+                                    <option value="1" hidden selected>Nivel de Inglés</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <input type="text" name="" id="" placeholder="Tu empresa actual/última">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <span class="prefix">$</span>
+                                    <input type="text" name="" id="" placeholder="Sueldo liquido mensual actual/último">
+                                </div>
+                            </div>
+    
+                            <div class="input-group">
+                                <div class="input-text">
+                                    <input type="text" name="" id="" placeholder="Años de experiencia laboral">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="hr-separator">
+
+                        <div class="form-group">
+                            <a href="quests.html" class="btn btn-blue">Próximo</a>
+                        </div>
+                    </div>
+                    <div class="col-empty"></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="blur-modal" id="blur">
+        <div class="modal-welcome" id="modal">
+            <div class="modal-titulo" >
+                <h4>
+                    PEDRO, BIENVENIDO(A) A THE BONDING
+                </h4>
+                <i class="material-icons close" id="close-modal">close</i>
+            </div>
+            <div class="modal-corpo">
+                <p>
+                    Estamos muy contentos por su registro aquí en The Bonding, y esperamos poder ayudarlo a conseguir el trabajo en la empresa de sus sueños.
+                </p>
+                <p>
+                    Si tiene dudas sobre cómo realizar este procedimiento, ¡no dude en ponerse en contacto con nuestro equipo de soporte!
+                </p>
+                <span class="modal-assinatura">¡SALUDOS, EL EQUIPO THE BONDING</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/sizeView.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/menuToggle.js"></script> 
+    <script src="assets/js/dropPerfil.js"></script> 
+</body>
+</html>
